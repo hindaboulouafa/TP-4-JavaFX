@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="hind.aboulouafa.ProductController"
+      spacing="10" alignment="CENTER"
+      stylesheets="@Style.css"
+      prefWidth="400" prefHeight="300">
+
+    <Label text="Ajouter un produit" styleClass="title-label" />
+
+    <HBox spacing="10">
+        <TextField fx:id="nameField" promptText="Nom du produit" styleClass="text-field"/>
+        <TextField fx:id="priceField" promptText="Prix" styleClass="text-field"/>
+        <Button text="Ajouter" onAction="#addProduct" styleClass="button"/>
+    </HBox>
+
+    <ListView fx:id="productList" prefHeight="200" styleClass="list-view"/>
+
+</VBox>
